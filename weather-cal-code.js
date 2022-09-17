@@ -5,7 +5,7 @@
 /*
 
 This script contains the logic that allows Weather Cal to work. Please do not modify this file. You can add customizations in the widget script.
-Documentation is available at github.com/mzeryck/Weather-Cal
+Documentation is available at github.com/CThor42/Weather-Cal
 
 */
 
@@ -17,7 +17,7 @@ const weatherCal = {
     this.fm = iCloudInUse ? FileManager.iCloud() : FileManager.local()
     this.bgPath = this.fm.joinPath(this.fm.libraryDirectory(), "weather-cal-" + this.name)
     this.prefPath = this.fm.joinPath(this.fm.libraryDirectory(), "weather-cal-preferences-" + name)
-    this.widgetUrl = "https://raw.githubusercontent.com/mzeryck/Weather-Cal/main/weather-cal.js"
+    this.widgetUrl = "https://raw.githubusercontent.com/CThor42/Weather-Cal/main/weather-cal.js"
     this.now = new Date()
     this.data = {}
     this.initialized = true
@@ -2491,7 +2491,7 @@ if (moduleName == Script.name()) {
       column
     `
     const name = "Weather Cal Widget Builder"
-    await weatherCal.runSetup(name, true, "Weather Cal code", "https://raw.githubusercontent.com/mzeryck/Weather-Cal/main/weather-cal-code.js")
+    await weatherCal.runSetup(name, true, "Weather Cal code", "https://raw.githubusercontent.com/CThor42/Weather-Cal/main/weather-cal-code.js")
     const w = await weatherCal.createWidget(layout, name, true)
     w.presentLarge()
     Script.complete()
